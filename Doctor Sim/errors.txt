@@ -2,16 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1108: expected statement.
-    music stop fadeout 2.0
-                       ^
-
-File "game/script.rpy", line 1123: end of line expected.
-    pov "[i]Er, uh... "butt"... heheh...[/i]"
-                       ^
-
-File "game/script.rpy", line 1151: expected statement.
-    music stop fadeout 1.0
-                       ^
+File "game/script.rpy", line 566: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a " at the end of the first line.)
+                waiter "No prob. Would you like anything to eat, friend?
 
 Ren'Py Version: Ren'Py 6.18.2.729

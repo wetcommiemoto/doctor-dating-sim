@@ -112,7 +112,7 @@ image flexcryf = im.Flip("flexcry.png", horizontal=True)
 image flexhappyf = im.Flip("flexhappy.png", horizontal=True)
 image flexmadf = im.Flip("flexmad.png", horizontal=True)
 image flexsadf = im.Flip("flexsad.png", horizontal=True)
-image flowers = "flower.png"
+image flowers = "flowers.png"
 image marxnotdance = "marxnotdance.png"
 
 # Declare characters used by this game. 
@@ -141,7 +141,7 @@ label start:
     play music "holler.mp3"
     "This is the exam I've been waiting for. My license. Finally!"
     "This is the moment... I'm... I'm going to walk into that room and pass!"
-    "Straight A's, all these years, all this work I've put into this..."
+    "Straight As, all these years, all this work I've put into this..."
     "I'm going to blow through this, right now!"
     hide text 
     scene bg exam 
@@ -250,7 +250,12 @@ label start:
     p "Dude, I checked literally like five minutes ago. [povname]’s on the list."
     hide pyro1
     show bsf
-    pb "Ah! There [povname] is! [povname]!"
+    if pronoun == "he":
+        pb "Ah! There he is! [povname]!"
+    if pronoun == "she":
+        pb "Ah! There she is! [povname]!"
+    if pronoun == "they":
+        pb "Ah! They they are! [povname]!"
     $ buttstudy = False
     $ friendredhead = False
     $ buttlater = False
@@ -408,6 +413,7 @@ label start:
                 play sound "alarm.mp3" 
                 buttz "Oh shit, it’s time to go. See you around, [povname]."
                 pov "Yeah, see you!"
+                scene black with fade
             "We can talk right here.":
                 $ buttzweirdout += 0
                 pov "We can talk right here, if you don’t mind."
@@ -452,6 +458,7 @@ label start:
                 $ renpy.pause (4.0)
                 buttz "Seems like it’s time for my other class. Take care, [povname]"
                 pov "Yeah, you too!"
+                scene black with fade
             "We can go to my room.":
                 pov "Well, we can actually go to my room if you have no problem with that."
                 buttz "Oh um.. I don’t.. I don’t feel like that’s such a good idea."
@@ -470,7 +477,7 @@ label start:
                 $ buttzweirdout += 1
                 $ lietobuttz += 0
                 hide buttsad with fade
-        scene black with fade
+                scene black with fade
         scene bg bedroomnight with fade
         stop music fadeout 1.0
         if buttzweirdout == 1:
@@ -482,7 +489,7 @@ label start:
             pov "I don’t know, this could be exciting."
             pov "*yawn*"
             pov "I should... mm… go to sleep..."
-        if lietobuttz == 0:
+        if lietobuttz == 0 and buttzweirdout == 0:
             pov "Buttz is really interesting, I feel like we could become really good friends."
             pov "It felt a little weird having to tell him about the test but he was really nice about it."
             pov "There’s really not a lot of people like that."
@@ -551,7 +558,12 @@ label start:
         hide mole with dissolve
         show mug at Position(xpos = 0.5, xanchor=0.5, ypos=0.5, yanchor=0.5) with dissolve
         pov "Ah, thank you."
-        waiter "No prob. Would you like anything to eat, [povname]?"
+        if pronoun == "he":
+            waiter "No prob. Would you like anything to eat, sir?"
+        if pronoun == "she":
+            waiter "No prob. Would you like anything to eat, ma'am?"
+        if pronoun == "they":
+            waiter "No prob. Would you like anything to eat, friend?"
         pov "Er.. Yes, can I have some eggs and.. I don’t know.. what do you recommend?"
         waiter "I like the bagels here. And the rodents."
         pov "What?"
@@ -575,7 +587,7 @@ label start:
         $ renpy.pause (1.0)
         hide mole with dissolve
         show breakfast at Position(xpos = 0.5, xanchor=0.5, ypos=0.5, yanchor=0.5) with dissolve
-        waiter "Alright, enjoy then."
+        waiter "Alright, enjoy."
         pov "Right. Thank you."
         pov "Let me have a bite..."
         hide breakfast with dissolve
@@ -644,7 +656,7 @@ label start:
                 $ molenameknown = True
             "That's none of your business.":
                 hide mole
-                show moleshocks
+                show moleshock
                 m "Well, I was just asking."
                 $ molenameknown = False
         pov "I have to go, I'm in a bit of a hurry."
@@ -740,7 +752,7 @@ label start:
         pov "What sucks?"
         p "It just does."
         pov "Why?"
-        p "'Cause. I was kind of into you."
+        p "'Cause. {w} I was kind of into you."
         pov "Wh..."
         pov "What?" with hpunch
         pov "She...{w} you..."
@@ -809,7 +821,7 @@ label start:
         pov "Uh..."
         menu:
             "Yeah":
-                pov "Yeah, sure!"
+                pov "I don't see why-"
             "Nah":
                 pov "I don't think so."
         buttz "Come on, I’m not taking no for an answer. I’ll pay for your food."
@@ -917,7 +929,7 @@ label start:
         play music "21st-century.mp3"
         p "Nah, I wasn’t charging you with anything. Just wanted to catch up."
         pov "Oh. Hey, hi. Sorry, I kinda got scared."
-        p "I’d be scared too, it’s really early. Do you work out a lot."
+        p "I’d be scared too, it’s really early. Do you work out a lot?"
         pov "Not really, I kind of dabble...?"
         p "Huh. I dunno, I think you’re in pretty good shape."
         pov "{i}Wh-What?{/i}"
@@ -933,7 +945,7 @@ label start:
         p "Well. You’re a weeaboo, that’s the best way to define it."
         pov "That doesn’t mean anything."
         p "Sure!"
-        pov "What?{w} Whatever. So, how long have you been working out?"
+        pov "What?{w} Whatever. So, how long have {i}you{/i} been working out?"
         p "Since like forever, basically. I really like to exercise, been taught to since a young age. Plus, I had to run a lot in High School!"
         pov "Really? Cross-country or something?"
         p "Oh no, I hate those teams. I had to run from the faculty all the time. I basically spent the entire day in the chemistry labs just burning shit until someone found out and of course, they couldn’t expel me because I was so damn perfect."
@@ -995,10 +1007,15 @@ label start:
         hide pyro1 with dissolve
         show mole with dissolve
         m "Oh hey!"
-        if molenameknown == False:
-            m "You’re [povname], right? I was your waiter!"
         if molenameknown == True:
-            m "You’re that [povname] from the restauraunt. I was your waiter, remember?"
+            m "You’re [povname], right? I was your waiter!"
+        if molenameknown == False:
+            if pronoun == "he":
+                m "You're that guy from the restaurant. I was your waiter, remember?"
+            if pronoun == "she":
+                m "You're that girl from the restaurant. I was your waiter, remember?"
+            if pronoun == "they":
+                m "You're that client from the restaurant. I was your waiter, remember?"
         pov "Oh. Yeah! I remember!"
         pov "Sorry for letting you pay for my card, I just wasn’t really thinking. It won’t happen again."
         m "Oh, that’s no problem, don’t even worry about it."
@@ -1039,9 +1056,9 @@ label start:
         pov "How would you know that information?"
         p "I’ve perused through the catalogue."
         pov "Oh. You mean...?"
-        p "Yeah, pretty much. I mean, granted, there’s no Karl Marx is having a piece of me but, you know. I like having fun!"
+        p "Yeah, pretty much. I mean, granted, there’s no way Karl Marx is having a piece of me but, you know. I like having fun!"
         pov "Fun is good."
-        p "Yes it is!"
+        p "Yes, it is!"
         p "I gotta leave to do the bonfire. Come if you like."
         pov "Hm... Maybe."
         hide pyro1 with dissolve
@@ -1141,7 +1158,7 @@ label start:
                         if partybutt == True:
                             buttz "We can meet at my place after the party! Maybe go out for some serious dinner."
                             pov "The party won’t have food?"
-                            buttz "I’m sure it will, I just can really eat any of it."
+                            buttz "I’m sure it will, I just can't really eat any of it."
                             pov "Oh, you’re on a diet?"
                             buttz "No, I'm a butt."
                             pov "Oh."
