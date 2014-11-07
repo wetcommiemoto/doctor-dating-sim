@@ -498,7 +498,7 @@ label start:
             scene black with fade
             pov "Fall..."
             pov "Asleep..."
-        if lietobuttz == 0:
+        if lietobuttz == 1:
             pov "I don’t know if I’m comfortable telling anyone about being in this school yet."
             pov "Some people can be really judgemental."
             pov "I’m certainly not proud of failing. And it won’t happen again."
