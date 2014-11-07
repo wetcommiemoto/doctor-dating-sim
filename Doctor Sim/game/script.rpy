@@ -963,14 +963,14 @@ label start:
         pov "...?"
         km "...!"
         pov "Can I help you?"
-        km "I vas vundering if you vud like to come to party, comrade."
+        km "Social progress can be measured by the proposition of party, comrade."
         hide marxnotdance with dissolve
         show flowers at Position(xpos = 0.5, xanchor=0.5, ypos=0.5, yanchor=0.5) with dissolve
         pov "Er... I..."
         pov "I don’t exactly know you, sir."
         hide flowers
         show marxnotdance
-        km "I understand."
+        km "This is a historical tragedy."
         hide marxnotdance with dissolve
         pov "{i}What just...{/i}"
         show pyro1 with dissolve
