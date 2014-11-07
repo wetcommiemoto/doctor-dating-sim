@@ -924,6 +924,8 @@ LICENSE.txt doesn't match anything.
 LICENSE.txt matches None (None).
 module/ doesn't match anything.
 module/ matches None (None).
+rapt/ doesn't match anything.
+rapt/ matches None (None).
 renpy/ matches renpy/ ([u'all']).
 renpy/angle/ matches renpy/** ([u'renpy']).
 renpy/angle/gl.pxd matches renpy/** ([u'renpy']).
