@@ -113,6 +113,7 @@ image flexhappyf = im.Flip("flexhappy.png", horizontal=True)
 image flexmadf = im.Flip("flexmad.png", horizontal=True)
 image flexsadf = im.Flip("flexsad.png", horizontal=True)
 image flowers = "flower.png"
+image marxnotdance = "marxnotdance.png"
 
 # Declare characters used by this game. 
 define pov = Character("[povname]", color="FFFFFF")
@@ -955,7 +956,7 @@ label start:
         p "Hide!"
         hide pyro1 with dissolve
         pov "{i}What’s going on?{/i}"
-        #show marxnotdance with dissolve
+        show marxnotdance with dissolve
         km "..."
         pov "..."
         km "..."
@@ -963,13 +964,14 @@ label start:
         km "...!"
         pov "Can I help you?"
         km "I vas vundering if you vud like to come to party, comrade."
-        #hide marxnotdance with dissolve
+        hide marxnotdance with dissolve
         show flowers at Position(xpos = 0.5, xanchor=0.5, ypos=0.5, yanchor=0.5) with dissolve
         pov "Er... I..."
         pov "I don’t exactly know you, sir."
         hide flowers
+        show marxnotdance
         km "I understand."
-        #hide marxnotdance with dissolve
+        hide marxnotdance with dissolve
         pov "{i}What just...{/i}"
         show pyro1 with dissolve
         p "That... was weird. Did he try to like, force you to join his cult or something?"
