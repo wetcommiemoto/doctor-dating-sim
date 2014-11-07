@@ -1,11 +1,11 @@
-Fri Nov 07 11:39:02 2014
+Fri Nov 07 12:01:57 2014
 Windows-post2008Server-6.2.9200
 Ren'Py 6.18.2.729
-Doctor Sim 0.0
+Doctor-Sim 0.01:2
 
 
 Windowed mode.
-Screen sizes: virtual=(800, 600) physical=(800, 600)
+Screen sizes: virtual=(800, 600) physical=(1304, 978)
 Vendor: 'ATI Technologies Inc.'
 Renderer: 'AMD Radeon HD 7700 Series'
 Version: '4.4.12874 Compatibility Profile Context 14.100.0.0'
@@ -299,8 +299,11 @@ Texture testing:
 Performance test:
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.015000 seconds.
+- Frame drawn at 0.016000 seconds.
 - Frame drawn at 0.031000 seconds.
-- Frame drawn at 0.047000 seconds.
-- Frame drawn at 0.064000 seconds.
-- 0.064000 seconds to render 5 frames.
+- Frame drawn at 0.048000 seconds.
+- Frame drawn at 0.065000 seconds.
+- 0.065000 seconds to render 5 frames.
+
+Windowed mode.
+Screen sizes: virtual=(800, 600) physical=(1304, 971)
