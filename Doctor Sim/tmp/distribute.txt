@@ -1,3 +1,4 @@
+.android.json matches .android.json ([u'android']).
 errors.txt matches errors.txt (None).
 game/ matches ** ([u'all']).
 game/21st-century.mp3 matches ** ([u'all']).
