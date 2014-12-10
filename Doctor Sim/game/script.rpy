@@ -23,6 +23,9 @@ image tml = Text("Three Months Later...", size=40)
 image tnd = Text("The Next Day...", size=40)
 image mhl = Text("Many Hours Later...", size=40)
 image ohl = Text("One Hour Later...", size=40)
+image eop = Text("End of Prologue", size=40)
+image coc = Text("CHAPTER ONE: THE COLOR OF COMPROMISE", size=40)
+image wip = Text("Save game here for update", size=40)
 image pyro1 = "pyro1.png"
 image pyro2 = im.Flip("pyro1.png", horizontal=True)
 image cangry = "crocangry.png"
@@ -1177,6 +1180,14 @@ label start:
                         buttz "Huh. Alright, well. I’ll take a seat."
                         pov "Yeah, we’ll talk later."
                         scene black with fade
+                        show eop at Position(xpos = 0.5, xanchor=0.5, ypos=0.5, yanchor=0.5) with fade
+                        $ renpy.pause (3.0)
+                        hide eop with dissolve
+                        show coc at Position(xpos = 0.5, xanchor=0.5, ypos=0.5, yanchor=0.5) with fade
+                        $ renpy.pause (3.0)
+                        hide coc with dissolve
+                        show wip at Position(xpos = 0.5, xanchor=0.5, ypos=0.5, yanchor=0.5) with fade
+                        pov "Save your game here, we haven't built the rest of the game."
                     "Nah":    
                         pov "I don’t think I have the same kind of feelings for you, Buttz."
                         hide butt
@@ -1192,5 +1203,10 @@ label start:
                         stop music fadeout 2.0
                         $ renpy.pause (3.0)
                         pov "{i}Shit.{/i}"
+                        show eop at Position(xpos = 0.5, xanchor=0.5, ypos=0.5, yanchor=0.5) with fade
+                        $ renpy.pause (3.0)
+                        hide eop with dissolve
+                        show wip at Position(xpos = 0.5, xanchor=0.5, ypos=0.5, yanchor=0.5) with fade
+                        pov "Save your game here, we haven't built the rest of the game."
                         $ renpy.pause (2.0)
 return
