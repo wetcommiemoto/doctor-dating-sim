@@ -16,6 +16,9 @@ image bg hometable = "hometable.jpg"
 image bg cafeteria = "cafeteria.png"
 image bg diner = "diner.png"
 image bg shower = "shower.png"
+image bg airplane = "airplane.png"
+image bg bedroomflashback1 = "bedroomflashback1.png"
+image bg kitchen = "kitchen.png"
 image envelope = "envelope.png"
 image letter = "letter.png"
 image twl = Text("Two Weeks Later...", size=40)
@@ -117,6 +120,11 @@ image flexmadf = im.Flip("flexmad.png", horizontal=True)
 image flexsadf = im.Flip("flexsad.png", horizontal=True)
 image flowers = "flowers.png"
 image marxnotdance = "marxnotdance.png"
+image phone = "phone.png"
+image banana = "banana.png"
+image phallicicecream = "phallicicecream.png"
+image cucumber = "cucumber.png"
+image macncheese = "macncheese.png"
 
 # Declare characters used by this game. 
 define pov = Character("[povname]", color="FFFFFF")
@@ -1186,6 +1194,153 @@ label start:
                         show coc at Position(xpos = 0.5, xanchor=0.5, ypos=0.5, yanchor=0.5) with fade
                         $ renpy.pause (3.0)
                         hide coc with dissolve
+                        $ bonfireEvent = 0
+                        $ newShirt = 0
+                        scene bg airplane with fade
+                        pov "{i}I haven't seen a plane fly around here in a while.{/i}"
+                        pov "{i}It's kind of amusing, I guess. {w} Rare occasion.{/i}"
+                        pov "{i}Someone's landing nearby, I guess either coming back or visiting.{/i}"
+                        pov "{i}Trying new things, I suppose.{/i}"
+                        scene black with fade
+                        scene bg bedroomnight with fade
+                        pov "{i}I keep waking up earlier and earlier...{/i}"
+                        pov "{i}This...{w} probably isn't healthy.{/i}"
+                        play sound "vibrate.mp3"
+                        pov "{i}Huh?{/i}"
+                        show phone at Position(xpos = 0.5, xanchor =0.5, ypos=0.5, yanchor=0.5) with dissolve
+                        pov "{i}One new text message.{/i}"
+                        pov "{i}I wonder who it is...{/i}"
+                        buttz "'Hey, this is Buttz. Is this [povname]?'"
+                        pov "{i}Hm...{/i}"
+                        pov "{i}'yes'{/i}"
+                        pov "{i}Why would he text me this late?{/i}"
+                        pov "{i}I don't know, maybe he's just bored...{/i}"
+                        buttz "'hey'"
+                        pov "{i}Is it really that late?{/i}"
+                        show clock at Position(xpos = 0.5, xanchor=0.5, ypos=0.5, yanchor=0.5) with dissolve
+                        pov "{i}3 AM, yes it really is.{/i}"
+                        hide clock
+                        label phoneconvo1:
+                        $ somethingwrong = 0
+                        $ pyrogaveyou = 0
+                        menu:
+                            "Send: 'Pyro gave you my number, huh.'":
+                                pov "{i}'pyro gave you my number?'{/i}"
+                                pov "{i}I guess she really does have everyone's information.{/i}"
+                                pov "{i}Bit creepy to be honest.{/i}"
+                                buttz "'Yeah, she gave me your number.'"
+                                pov "{i}I don't even understand where'd she get it...{/i}"
+                                pov "{i}'where did she get it?'{/i}"
+                                pov "{i}I mean, I {b}do{/b} try to keep my privacy intact...{/i}"
+                                buttz "'I think she was talking to her 'friend.' Apparently, she has some seriously interesting connections, she can pretty much find information for any one of us."
+                                pov "{i}Whoa, that's some serious shit.{/i}"
+                                pov "{i}I thought she specialized in some kind of fire science thing?{/i}"
+                                pov "{i}'friend?'{/i}"
+                                buttz "'That's what I've heard from the others. Kind of mysterious, honestly.'"
+                                pov "{i}This is a little concerning.{/i}"
+                                pov "{i}Maybe I should get to know Pyro a little better.{/i}"
+                                pov "{i}Find out what she really wants.{/i}"
+                                $ pyrogaveyou == 1
+                                if somethingwrong == 0:
+                                    jump phoneconvo1
+                            "Send: 'Is something wrong?'":
+                                pov "{i}'is something wrong?'{/i}"
+                                pov "{i}Maybe there's some kind of emergency, who knows...{/i}"
+                                pov "{i}Or... {w} maybe he's one of those weird dudes who need to talk all the time.{/i}"
+                                pov "{i}I don't know.{/i}"
+                                play sound "vibrate.mp3"
+                                pov "{i}Oh?{/i}"
+                                buttz "'I'm bored, honestly.'"
+                                pov "{i}He's bored?{/i}"
+                                pov "{i}He doesn't mean...{/i}"
+                                pov "{i}We've only just started going out...{/i}"
+                                pov "{i}Oh no...{/i}"
+                                pov "{i}'youre bored?{/i}"
+                                pov "{i}Maybe he's a rough night...{/i}"
+                                buttz "'Yeah. I'm really bored.'"
+                                pov "{i}Hm...{/i}"
+                                pov "{i}'Well, how can I help?'{/i}"
+                                pov "{i}I hope he's not gonna say something really weird.{/i}"
+                                pov "{i}I've heard that there's a lot of people who are into that fucked up text porn.{/i}"
+                                pov "{i}Those are super creepy people, {w} typically people who play virtual novels and such...{/i}"
+                                pov "{i}Ugh... {w} It makes me disgusted to just think about it.{/i}"
+                                buttz "'Tell me how your day was.'"
+                                pov "{i}Oh no, I hope he doesn't get off this kind of thing...{/i}"
+                                pov "{i}Nononono.{/i}"
+                                pov "{i}Okay. {w} Be vague. {w} I can't just assume these things.{/i}"
+                                pov "{i}'i didn't do much, honestly. after you asked me out, i just went home, did homework, cooked some dinner and napped until you woke me up now.'{/i}"
+                                pov "{i}I didn't get too specific about any of these things, I can't provoke any action...{/i}"
+                                pov "{i}I need to be overly cautious.{/i}"
+                                buttz "'What did you eat?'"
+                                pov "{i}Shit!{/i}"
+                                pov "{i}I hadn't thought about him asking me. Fuck, fuck...{/i}"
+                                pov "{i}Think of something...{w}non-phallic.{/i}"
+                                pov "{i}What did I even eat...{/i}"
+                                scene bg bedroomflashback1 with fade
+                                pov "{i}Shit! I cooked myself hot dogs!{/i}"
+                                pov "{i}With mayo!{/i}"
+                                pov "{i}Fuck!{/i}"
+                                pov "{i}God damn it!{/i}"
+                                scene bg bedroomnight with fade
+                                pov "{i}Okay, what other foods do I have in my house...{/i}"
+                                scene bg kitchen with fade
+                                pov "{i}Let's see.{/i}"
+                                show banana at Position(xpos=0.5, xanchor=0.5, ypos=0.5, yanchor=0.5)with dissolve
+                                pov "{i}No, goddamnit!{/i}"
+                                hide banana
+                                show phallicicecream at Position(xpos=0.5, xanchor=0.5, ypos=0.5, yanchor=0.5)with dissolve
+                                pov "{i}Fuck, what the hell!{/i}"
+                                hide phallicicecream
+                                show cucumber at Position (xpos=0.5, xanchor=0.5, ypos=0.5, yanchor=0.5)with dissolve
+                                pov "{i}Jesus fucking Christ!{/i}"
+                                pov "{i}Is there any food in this fucking house that is {b}not{/b} shaped like a dick!?{/i}"
+                                hide cucumber
+                                pov "{i}Okay, [povname], just make something up.{/i}"
+                                show macncheese at Position (xpos=0.5, xanchor=0.5, ypos=0.5, yanchor=0.5)with dissolve
+                                pov "{i}Mac and Cheese.{/i}"
+                                pov "{i}Yes...{w} Mac and Cheese...{/i}"
+                                pov "{i}That will work!{/i}"
+                                pov "{i}'made myself some nice mac and cheese{/i}"
+                                pov "{i}If I add a happy face, it might look more legit.{/i}"
+                                pov "{i}'made myself some nice mac and cheese :)'{/i}"
+                                pov "{i}Buttz can't get any weird ideas if we're talking about just Mac and Cheese. No way.{/i}"
+                                pov "{i}It's such a safe and...{w}innocent food...{/i}"
+                                play sound "vibrate.mp3"
+                                buttz "'Oh. Was it just like the regular old box ones or did you actually cook it?'"
+                                pov "{i}'are you fucking judging me'{/i}"
+                                buttz "'No! No, I'm not!'"
+                                pov "{i}'good'{/i}"
+                                pov "{i}That was close...{/i}"
+                                pov "{i}I like Buttz but I cannot allow him to use text as a means of pleasure...{/i}"
+                                pov "{i}Only bad things could come from such a situation.{/i}"
+                                buttz "'How about homework? What'd you study?'"
+                                pov "{i}'i only have one course.'{/i}"
+                                buttz "'Oh. That's right.'"
+                                pov "{i}Hm... It's only fair to ask back, I guess...{/i}"
+                                pov "{i}'what did you do today?'{/i}"
+                                buttz "'Well, considering the time, technically, all I've done today is talk to you.'"
+                                pov "{i}He's being a smart-ass.{/i}"
+                                pov "{i}'right. well, what did you do {b}yesterday{/b}'{/i}"
+                                buttz "'After class, I went home and cleaned my face a little, hadn't done that in a while. Then did some homework and got really bored. I don't have too many people to talk to once I'm out of class and not talking to my patients.'"
+                                pov "{i}Patients?{/i}"
+                                pov "{i}Right, he was a dentist not too long ago.{/i}"
+                                pov "{i}'do you miss working as a dentist'{/i}"
+                                buttz "'Not really, I kind of only did it because my parents told me to - I mean, I'm good at it, don't get me wrong but it's not particularly exciting even though I made good money. My patients were typically the nice part of my day and occasionally I'd talk to my med school friends and go to meet-ups and such. We'd been actually pretty out of touch until now, though.'"
+                                pov "{i}Buttz must've had really forceful parents, I suppose.{/i}"
+                                pov "{i}Well, at least he got to meet interesting people all the time.{/i}"
+                                pov "{i}'well, i hope you get your license and all that.'{/i}"
+                                buttz "'Yeah, me too.'"
+                                $ somethingwrong == 1
+                                if pyrogaveyou == 0:
+                                    jump phoneconvo1
+                        buttz "'Hey. So is the party a definite go or no-go?'"
+                        if partybutt == True:
+                            pov "{i}I don't see why anything would change.{/i}"
+                        if partybutt == False:                                                       
+                            pov "{i}This could be a chance to {b}really{/b} get to know who I'm dating...{/i}"
+                            pov "{i}'i think i'll come.'{/i}"
+                            pov "{i}I guess this could also be an opportunity to meet everyone else, too.{/i}"
+                        buttz "'Awesome! Well, this weekend, yeah?'"
                         show wip at Position(xpos = 0.5, xanchor=0.5, ypos=0.5, yanchor=0.5) with fade
                         pov "Save your game here, we haven't built the rest of the game."
                     "Nah":    

@@ -2,6 +2,12 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1190: Tab characters are not allowed in Ren'Py scripts.
+File "game/script.rpy", line 1245: end of line expected.
+    jump label phoneconvo1
+               ^
+
+File "game/script.rpy", line 1335: end of line expected.
+    jump label phoneconvo1
+               ^
 
 Ren'Py Version: Ren'Py 6.18.2.729
