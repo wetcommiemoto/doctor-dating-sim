@@ -1220,9 +1220,9 @@ label start:
                         show clock at Position(xpos = 0.5, xanchor=0.5, ypos=0.5, yanchor=0.5) with dissolve
                         pov "{i}3 AM, yes it really is.{/i}"
                         hide clock
-                        label phoneconvo1:
                         $ somethingwrong = 0
                         $ pyrogaveyou = 0
+                        label phoneconvo1:
                         menu:
                             "Send: 'Pyro gave you my number, huh.'":
                                 pov "{i}'pyro gave you my number?'{/i}"
