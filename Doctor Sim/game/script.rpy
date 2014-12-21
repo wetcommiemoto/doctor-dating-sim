@@ -1224,7 +1224,7 @@ label start:
                         $ pyrogaveyou = 0
                         label phoneconvo1:
                         menu:
-                            "Send: 'Pyro gave you my number, huh.'":
+                            "Send: 'Pyro gave you my number, huh.'" if pyrogaveyou == 0:
                                 pov "{i}'pyro gave you my number?'{/i}"
                                 pov "{i}I guess she really does have everyone's information.{/i}"
                                 pov "{i}Bit creepy to be honest.{/i}"
@@ -1243,7 +1243,7 @@ label start:
                                 $ pyrogaveyou = 1
                                 if somethingwrong == 0:
                                     jump phoneconvo1
-                            "Send: 'Is something wrong?'":
+                            "Send: 'Is something wrong?'" if somethingwrong == 0:
                                 pov "{i}'is something wrong?'{/i}"
                                 pov "{i}Maybe there's some kind of emergency, who knows...{/i}"
                                 pov "{i}Or... {w} maybe he's one of those weird dudes who need to talk all the time.{/i}"
