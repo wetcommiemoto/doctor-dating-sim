@@ -1240,7 +1240,7 @@ label start:
                                 pov "{i}This is a little concerning.{/i}"
                                 pov "{i}Maybe I should get to know Pyro a little better.{/i}"
                                 pov "{i}Find out what she really wants.{/i}"
-                                $ pyrogaveyou == 1
+                                $ pyrogaveyou = 1
                                 if somethingwrong == 0:
                                     jump phoneconvo1
                             "Send: 'Is something wrong?'":
@@ -1330,7 +1330,7 @@ label start:
                                 pov "{i}Well, at least he got to meet interesting people all the time.{/i}"
                                 pov "{i}'well, i hope you get your license and all that.'{/i}"
                                 buttz "'Yeah, me too.'"
-                                $ somethingwrong == 1
+                                $ somethingwrong = 1
                                 if pyrogaveyou == 0:
                                     jump phoneconvo1
                         buttz "'Hey. So is the party a definite go or no-go?'"
