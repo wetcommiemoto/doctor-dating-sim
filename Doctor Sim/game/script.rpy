@@ -19,6 +19,8 @@ image bg shower = "shower.png"
 image bg airplane = "airplane.png"
 image bg bedroomflashback1 = "bedroomflashback1.png"
 image bg kitchen = "kitchen.png"
+image bg underwater = "underwater.png"
+image bg outsidepool = "outsidepool.png"
 image envelope = "envelope.png"
 image letter = "letter.png"
 image twl = Text("Two Weeks Later...", size=40)
@@ -27,6 +29,7 @@ image tnd = Text("The Next Day...", size=40)
 image mhl = Text("Many Hours Later...", size=40)
 image ohl = Text("One Hour Later...", size=40)
 image eop = Text("End of Prologue", size=40)
+image stl = Text("Some Time Later...", size=40)
 image coc = Text("CHAPTER ONE: THE COLOR OF COMPROMISE", size=40)
 image wip = Text("Save game here for update", size=40)
 image pyro1 = "pyro1.png"
@@ -582,7 +585,7 @@ label start:
         pov "Bagels. Alright, then I’ll have one of those. What types?"
         waiter "Uh. Bagel types?"
         pov "Yeah, do you have like raisin or cinnamon bagels?"
-        waiter "Uh. We have {i}bagels{/i}."
+        waiter "Uh. We have (bagels)."
         pov "Er.. then I’ll take that."
         waiter "Very well."
         pov "Let me have some of this coffee…"
@@ -803,20 +806,20 @@ label start:
         pov "And nobody else has noticed."
         pov "Okay... think... without... saying it..."
         pov "Maybe... Like..."
-        pov "{i}Like this?{/i}"
-        pov "{i}Oh my God. I did it.{/i}"
-        pov "{i}I’m thinking.. while.. not.. saying anything.{/i}"
-        pov "{i}How did I live so many years without this?{/i}"
-        pov "{i}Holy shit!{/i}"
-        pov "{i}This is awesome!{/i}"
+        pov "(Like this?)"
+        pov "(Oh my God. I did it.)"
+        pov "(I’m thinking.. while.. not.. saying anything.)"
+        pov "(How did I live so many years without this?)"
+        pov "(Holy shit!)"
+        pov "(This is awesome!)"
         show bs with dissolve
         pb "Alright, so today we’re gonna learn about nuclear fission."
-        pov "{i}This is gonna be boring.{/i}"
+        pov "(This is gonna be boring.)"
         scene bg black with fade
-        pov "{i}I can’t believe Pyro was into me.{/i}"
-        pov "{i}Maybe I can talk to Buttz about it.{/i}"
+        pov "(I can’t believe Pyro was into me.)"
+        pov "(Maybe I can talk to Buttz about it.)"
         if buttzweirdout == 1:
-            pov "{i}That's if he's not angry at me... or whatever...{/i}"
+            pov "(That's if he's not angry at me... or whatever...)"
         stop music fadeout 1.0
         play sound "alarm.mp3"
         scene bg class3 with fade
@@ -828,7 +831,7 @@ label start:
             buttz "Right. [povname]."
         buttz "I was wondering if maybe you wanted to have lunch with me?"
         if buttzweirdout == 1:
-            pov "{i}I guess he forgot about it already...{/i}"
+            pov "(I guess he forgot about it already...)"
         pov "Uh..."
         menu:
             "Yeah":
@@ -843,7 +846,7 @@ label start:
         show butt with dissolve
         buttz "Hey, so. I was wondering if you had gotten around meeting anyone else in school."
         pov "Not really. I talked to Pyro a while ago. She was..."
-        pov "{i}Dear fuck.{/i}"
+        pov "(Dear fuck.)"
         pov "She was fine."
         buttz "Oh, well, I’m glad you’ve made more friends. We’re having a big party this Friday, most of the meds. You wanna come?"
         pov "Oh er. I’m not sure, who’s coming?"
@@ -895,45 +898,45 @@ label start:
                 $ partybutt = False
         hide butt with dissolve
         scene bg bedroom with fade
-        pov "{i}Party, huh?{/i}"
-        pov "{i}Maybe it could be a lot of fun.{/i}"
-        pov "{i}I dunno, it could be worth my time...{/i}"
-        pov "{i}We’ll see.{/i}"
+        pov "(Party, huh?)"
+        pov "(Maybe it could be a lot of fun.)"
+        pov "(I dunno, it could be worth my time...)"
+        pov "(We’ll see.)"
         scene bg black with fade
         show mhl at Position(xpos = 0.5, xanchor=0.5, ypos=0.5, yanchor=0.5) with fade
         stop music fadeout 1.0
         $ renpy.pause (3.0)
         hide mhl with fade
         scene bg bedroom
-        pov "{i}Shit... it’s really early...{/i}"
-        pov "{i}What time is it...{/i}"
-        pov "{i}Uhh...{/i}"
+        pov "(Shit... it’s really early...)"
+        pov "(What time is it...)"
+        pov "(Uhh...)"
         show clock at Position(xpos = 0.5, xanchor=0.5, ypos=0.5, yanchor=0.5) with dissolve
-        pov "{i}That’s... 5 am.{/i}"
-        pov "{i}What woke me up so early?{/i}"
-        pov "{i}Maybe I should go for a jog.{/i}"
-        pov "{i}Or something.{/i}"
-        pov "{i}I should take a shower.{/i}"
+        pov "(That’s... 5 am.)"
+        pov "(What woke me up so early?)"
+        pov "(Maybe I should go for a jog.)"
+        pov "(Or something.)"
+        pov "(I should take a shower.)"
         scene bg shower with fade
-        pov "{i}It’s so early.{/i}"
-        pov "{i}Maybe I should’ve gone back to bed.{/i}"
-        pov "{i}Or... maybe not...{/i}"
+        pov "(It’s so early.)"
+        pov "(Maybe I should’ve gone back to bed.)"
+        pov "(Or... maybe not...)"
         scene bg black with fade
-        pov "{i}I.. I see something.{/i}"
-        pov "{i}Under the fall of water, I can see something.{/i}"
-        pov "{i}There was a small girl...{/i}"
-        pov "{i}She was struggling through a winter storm...{/i}"
-        pov "{i}I think... I remember her gray hair, how it grew...{/i}"
-        pov "{i}And the spirits of her parents fell behind...{/i}"
-        pov "{i}I remember...{/i}"
-        pov "{i}I remember the smell of citrus... mostly limes...{/i}"
-        pov "{i}I remember...{/i}"
+        pov "(I.. I see something.)"
+        pov "(Under the fall of water, I can see something.)"
+        pov "(There was a small girl...)"
+        pov "(She was struggling through a winter storm...)"
+        pov "(I think... I remember her gray hair, how it grew...)"
+        pov "(And the spirits of her parents fell behind...)"
+        pov "(I remember...)"
+        pov "(I remember the smell of citrus... mostly limes...)"
+        pov "(I remember...)"
         scene bg schoolex with fade
-        pov "{i}I remember!{/i}"
-        pov "{i}No, I forgot. What was I thinking about?{/i}"
-        pov "{i}I should probably get water, I’ve been jogging for a while.{/i}"
-        pov "{i}Maybe, I’m not sure.{/i}"
-        pov "{i}Hm...{/i}"
+        pov "(I remember!)"
+        pov "(No, I forgot. What was I thinking about?)"
+        pov "(I should probably get water, I’ve been jogging for a while.)"
+        pov "(Maybe, I’m not sure.)"
+        pov "(Hm...)"
         u "Stop right there!"
         pov "WHAT’S GOING ON? I’M INNOCENT!" with hpunch
         show pyro1 with dissolve
@@ -943,8 +946,8 @@ label start:
         p "I’d be scared too, it’s really early. Do you work out a lot?"
         pov "Not really, I kind of dabble...?"
         p "Huh. I dunno, I think you’re in pretty good shape."
-        pov "{i}Wh-What?{/i}"
-        pov "{i}I’m... what?{/i}"
+        pov "(Wh-What?)"
+        pov "(I’m... what?)"
         p "Jesus Christ, just because I tell you something doesn’t mean you have to pause in silence since you can’t, for some god awful reason, think out loud anymore, you weeaboo."
         pov "I’m...{w} what... what is a weeaboo?"
         p "Oh. I’d think you would know."
@@ -956,7 +959,7 @@ label start:
         p "Well. You’re a weeaboo, that’s the best way to define it."
         pov "That doesn’t mean anything."
         p "Sure!"
-        pov "What?{w} Whatever. So, how long have {i}you{/i} been working out?"
+        pov "What?{w} Whatever. So, how long have (you) been working out?"
         p "Since like forever, basically. I really like to exercise, been taught to since a young age. Plus, I had to run a lot in High School!"
         pov "Really? Cross-country or something?"
         p "Oh no, I hate those teams. I had to run from the faculty all the time. I basically spent the entire day in the chemistry labs just burning shit until someone found out and of course, they couldn’t expel me because I was so damn perfect."
@@ -964,9 +967,9 @@ label start:
         p "Oh no, it totally is! They ran after me to give me a talk each time but I never got suspended or anything. Being pretty has its perks."
         pov "Well... I still don’t believe you."
         p "Whatever man, I don’t care. I’m perfect the way I am!"
-        pov "{i}Is she serious?{/i}"
-        pov "{i}I don’t know.. this girl’s kind of.. I can’t tell if she’s joking or not.{/i}"
-        pov "{i}Hmm...{/i}"
+        pov "(Is she serious?)"
+        pov "(I don’t know.. this girl’s kind of.. I can’t tell if she’s joking or not.)"
+        pov "(Hmm...)"
         p "Are you thinking in your head?"
         p "You can let it out if you like. As I said, it’s much more attractive that way."
         pov "Uh. Okay, I guess."
@@ -978,7 +981,7 @@ label start:
         pov "Huh?"
         p "Hide!"
         hide pyro1 with dissolve
-        pov "{i}What’s going on?{/i}"
+        pov "(What’s going on?)"
         show marxnotdance with dissolve
         km "..."
         pov "..."
@@ -995,7 +998,7 @@ label start:
         show marxnotdance
         km "This is a historical tragedy."
         hide marxnotdance with dissolve
-        pov "{i}What just...{/i}"
+        pov "(What just...)"
         show pyro1 with dissolve
         p "That... was weird. Did he try to like, force you to join his cult or something?"
         pov "Uh. No, not really."
@@ -1060,8 +1063,8 @@ label start:
         p "Well, yeah, but he’s kind of clingy."
         pov "He doesn’t seem clingy to me."
         p "Okay fine, he’s not, but he sucks at sex."
-        pov "{i}How would she know that!?{/i}"
-        pov "{i}This is rather odd...{/i}"
+        pov "(How would she know that!?)"
+        pov "(This is rather odd...)"
         p "What did I tell you about thinking?"
         pov "Oh. Right."
         pov "How would you know that information?"
@@ -1089,11 +1092,11 @@ label start:
         p "Well. Yeah, I’m leaving now, definitely."
         hide pyro1 with dissolve
         stop music fadeout 1.0
-        pov "{i}I’ve still got a few hours before class. Maybe I should talk to Buttz.{/i}"
+        pov "(I’ve still got a few hours before class. Maybe I should talk to Buttz.)"
         scene bg class2 with fade
-        pov "{i}Nobody’s here yet.{/i}"
-        pov "{i}I guess I have some alone time to myself.{/i}"
-        pov "{i}I can wait for Buttz here.{/i}"
+        pov "(Nobody’s here yet.)"
+        pov "(I guess I have some alone time to myself.)"
+        pov "(I can wait for Buttz here.)"
         scene black with fade
         show ohl at Position(xpos = 0.5, xanchor=0.5, ypos=0.5, yanchor=0.5) with fade
         $ renpy.pause (3.0)
@@ -1110,7 +1113,7 @@ label start:
         buttz "How about you?"
         pov "I’m alright."
         buttz "Good. So hey. I heard from Pyro that you two are going out or something?"
-        pov "{i}Wh-what???{/i}"
+        pov "(Wh-what???)"
         menu:
             "Yeah":
                 pov "Yeah.. something like that."
@@ -1130,18 +1133,18 @@ label start:
                 $ buttzweirdout += 1
                 $ lietobuttz += 1
                 hide buttsad with dissolve
-                pov "{i}What just even...{/i}"
-                pov "{i}I thought that would go significantly differently...{/i}"
-                pov "{i}I mean, I had to see what would happen but I didn’t know it would make him feel like that...{i}"
-                pov "{i}Shit...{/i}"
-                pov "{i}Where is he going even? Class is gonna start soon...{/i}"
-                pov "{i}I... I shouldn’t worry. I’ll see him at that party eventually. People seem to keep inviting me anyway.{/i}"
-                pov "{i}He’ll be okay.{/i}"
+                pov "(What just even...)"
+                pov "(I thought that would go significantly differently...)"
+                pov "(I mean, I had to see what would happen but I didn’t know it would make him feel like that...("
+                pov "(Shit...)"
+                pov "(Where is he going even? Class is gonna start soon...)"
+                pov "(I... I shouldn’t worry. I’ll see him at that party eventually. People seem to keep inviting me anyway.)"
+                pov "(He’ll be okay.)"
                 scene black with fade
-                pov "{i}It shouldn’t be a big deal. We’ll have to talk eventually. Right?{/i}"
+                pov "(It shouldn’t be a big deal. We’ll have to talk eventually. Right?)"
                 stop music fadeout 2.0
                 $ renpy.pause (3.0)
-                pov "{i}Hm...{/i}"
+                pov "(Hm...)"
                 $ renpy.pause (2.0)
             "Nah":
                 pov "Oh no, not at all. Where’d you hear that?"
@@ -1150,16 +1153,16 @@ label start:
                 buttz "Okay, well. I just wanted to confirm it. In any case, I was wondering..."
                 pov "Huh?"
                 buttz "Would you like to go for a date? I know I’m a little bit awkward but...{w} I really like you, [povname]."
-                pov "{i}Whoa... Did he just...{/i}"
-                pov "{i}He can’t be serious, is he?{/i}"
-                pov "{i}Then again, he is literally a butt. I should probably stop questioning whether anyone or serious or not in this school...{/i}"
-                pov "{i}But...{/i}"
+                pov "(Whoa... Did he just...)"
+                pov "(He can’t be serious, is he?)"
+                pov "(Then again, he is literally a butt. I should probably stop questioning whether anyone or serious or not in this school...)"
+                pov "(But...)"
                 pov "Er, uh..."
                 buttz "... heheh..."
                 pov "Oh... hmm..."
-                pov "{i}This is difficult. I barely know this guy, but he’s not a bad dude...{/i}"
-                pov "{i}Hmm…{/i}"
-                pov "{i}Should I give it a try?{/i}"
+                pov "(This is difficult. I barely know this guy, but he’s not a bad dude...)"
+                pov "(Hmm…)"
+                pov "(Should I give it a try?)"
                 menu:
                     "Yeah":
                         pov "Sure! I don’t see why not."
@@ -1180,7 +1183,7 @@ label start:
                             buttz "After the party, I can text you and we can meet up to go somewhere, if you like."
                             pov "I don’t see why not."
                             buttz "Cool. I’ll text you then."
-                            pov "{i}I’m still wondering how Pyro got my number.{/i}"
+                            pov "(I’m still wondering how Pyro got my number.)"
                         pov "Well. We should get ready for class. The alarm’s about to go off..."
                         buttz "You s-"
                         stop music fadeout 1.0
@@ -1197,150 +1200,199 @@ label start:
                         $ bonfireEvent = 0
                         $ newShirt = 0
                         scene bg airplane with fade
-                        pov "{i}I haven't seen a plane fly around here in a while.{/i}"
-                        pov "{i}It's kind of amusing, I guess. {w} Rare occasion.{/i}"
-                        pov "{i}Someone's landing nearby, I guess either coming back or visiting.{/i}"
-                        pov "{i}Trying new things, I suppose.{/i}"
+                        pov "(I haven't seen a plane fly around here in a while.)"
+                        pov "(It's kind of amusing, I guess. {w} Rare occasion.)"
+                        pov "(Someone's landing nearby, I guess either coming back or visiting.)"
+                        pov "(Trying new things, I suppose.)"
                         scene black with fade
                         scene bg bedroomnight with fade
-                        pov "{i}I keep waking up earlier and earlier...{/i}"
-                        pov "{i}This...{w} probably isn't healthy.{/i}"
+                        pov "(I keep waking up earlier and earlier...)"
+                        pov "(This...{w} probably isn't healthy.)"
                         play sound "vibrate.mp3"
-                        pov "{i}Huh?{/i}"
+                        pov "(Huh?)"
                         show phone at Position(xpos = 0.5, xanchor =0.5, ypos=0.5, yanchor=0.5) with dissolve
-                        pov "{i}One new text message.{/i}"
-                        pov "{i}I wonder who it is...{/i}"
+                        pov "(One new text message.)"
+                        pov "(I wonder who it is...)"
                         buttz "'Hey, this is Buttz. Is this [povname]?'"
-                        pov "{i}Hm...{/i}"
-                        pov "{i}'yes'{/i}"
-                        pov "{i}Why would he text me this late?{/i}"
-                        pov "{i}I don't know, maybe he's just bored...{/i}"
+                        pov "(Hm...)"
+                        pov "('yes')"
+                        pov "(Why would he text me this late?)"
+                        pov "(I don't know, maybe he's just bored...)"
                         buttz "'hey'"
-                        pov "{i}Is it really that late?{/i}"
+                        pov "(Is it really that late?)"
                         show clock at Position(xpos = 0.5, xanchor=0.5, ypos=0.5, yanchor=0.5) with dissolve
-                        pov "{i}3 AM, yes it really is.{/i}"
+                        pov "(3 AM, yes it really is.)"
                         hide clock
                         $ somethingwrong = 0
                         $ pyrogaveyou = 0
                         label phoneconvo1:
                         menu:
                             "Send: 'Pyro gave you my number, huh.'" if pyrogaveyou == 0:
-                                pov "{i}'pyro gave you my number?'{/i}"
-                                pov "{i}I guess she really does have everyone's information.{/i}"
-                                pov "{i}Bit creepy to be honest.{/i}"
+                                pov "('pyro gave you my number?')"
+                                pov "(I guess she really does have everyone's information.)"
+                                pov "(Bit creepy to be honest.)"
                                 buttz "'Yeah, she gave me your number.'"
-                                pov "{i}I don't even understand where'd she get it...{/i}"
-                                pov "{i}'where did she get it?'{/i}"
-                                pov "{i}I mean, I {b}do{/b} try to keep my privacy intact...{/i}"
+                                pov "(I don't even understand where'd she get it...)"
+                                pov "('where did she get it?')"
+                                pov "(I mean, I {b}do{/b} try to keep my privacy intact...)"
                                 buttz "'I think she was talking to her 'friend.' Apparently, she has some seriously interesting connections, she can pretty much find information for any one of us."
-                                pov "{i}Whoa, that's some serious shit.{/i}"
-                                pov "{i}I thought she specialized in some kind of fire science thing?{/i}"
-                                pov "{i}'friend?'{/i}"
+                                pov "(Whoa, that's some serious shit.)"
+                                pov "(I thought she specialized in some kind of fire science thing?)"
+                                pov "('friend?')"
                                 buttz "'That's what I've heard from the others. Kind of mysterious, honestly.'"
-                                pov "{i}This is a little concerning.{/i}"
-                                pov "{i}Maybe I should get to know Pyro a little better.{/i}"
-                                pov "{i}Find out what she really wants.{/i}"
+                                pov "(This is a little concerning.)"
+                                pov "(Maybe I should get to know Pyro a little better.)"
+                                pov "(Find out what she really wants.)"
                                 $ pyrogaveyou = 1
                                 if somethingwrong == 0:
                                     jump phoneconvo1
                             "Send: 'Is something wrong?'" if somethingwrong == 0:
-                                pov "{i}'is something wrong?'{/i}"
-                                pov "{i}Maybe there's some kind of emergency, who knows...{/i}"
-                                pov "{i}Or... {w} maybe he's one of those weird dudes who need to talk all the time.{/i}"
-                                pov "{i}I don't know.{/i}"
+                                pov "('is something wrong?')"
+                                pov "(Maybe there's some kind of emergency, who knows...)"
+                                pov "(Or... {w} maybe he's one of those weird dudes who need to talk all the time.)"
+                                pov "(I don't know.)"
                                 play sound "vibrate.mp3"
-                                pov "{i}Oh?{/i}"
+                                pov "(Oh?)"
                                 buttz "'I'm bored, honestly.'"
-                                pov "{i}He's bored?{/i}"
-                                pov "{i}He doesn't mean...{/i}"
-                                pov "{i}We've only just started going out...{/i}"
-                                pov "{i}Oh no...{/i}"
-                                pov "{i}'youre bored?{/i}"
-                                pov "{i}Maybe he's a rough night...{/i}"
+                                pov "(He's bored?)"
+                                pov "(He doesn't mean...)"
+                                pov "(We've only just started going out...)"
+                                pov "(Oh no...)"
+                                pov "('youre bored?)"
+                                pov "(Maybe he's a rough night...)"
                                 buttz "'Yeah. I'm really bored.'"
-                                pov "{i}Hm...{/i}"
-                                pov "{i}'Well, how can I help?'{/i}"
-                                pov "{i}I hope he's not gonna say something really weird.{/i}"
-                                pov "{i}I've heard that there's a lot of people who are into that fucked up text porn.{/i}"
-                                pov "{i}Those are super creepy people, {w} typically people who play virtual novels and such...{/i}"
-                                pov "{i}Ugh... {w} It makes me disgusted to just think about it.{/i}"
+                                pov "(Hm...)"
+                                pov "('Well, how can I help?')"
+                                pov "(I hope he's not gonna say something really weird.)"
+                                pov "(I've heard that there's a lot of people who are into that fucked up text porn.)"
+                                pov "(Those are super creepy people, {w} typically people who play virtual novels and such...)"
+                                pov "(Ugh... {w} It makes me disgusted to just think about it.)"
                                 buttz "'Tell me how your day was.'"
-                                pov "{i}Oh no, I hope he doesn't get off this kind of thing...{/i}"
-                                pov "{i}Nononono.{/i}"
-                                pov "{i}Okay. {w} Be vague. {w} I can't just assume these things.{/i}"
-                                pov "{i}'i didn't do much, honestly. after you asked me out, i just went home, did homework, cooked some dinner and napped until you woke me up now.'{/i}"
-                                pov "{i}I didn't get too specific about any of these things, I can't provoke any action...{/i}"
-                                pov "{i}I need to be overly cautious.{/i}"
+                                pov "(Oh no, I hope he doesn't get off this kind of thing...)"
+                                pov "(Nononono.)"
+                                pov "(Okay. {w} Be vague. {w} I can't just assume these things.)"
+                                pov "('i didn't do much, honestly. after you asked me out, i just went home, did homework, cooked some dinner and napped until you woke me up now.')"
+                                pov "(I didn't get too specific about any of these things, I can't provoke any action...)"
+                                pov "(I need to be overly cautious.)"
                                 buttz "'What did you eat?'"
-                                pov "{i}Shit!{/i}"
-                                pov "{i}I hadn't thought about him asking me. Fuck, fuck...{/i}"
-                                pov "{i}Think of something...{w}non-phallic.{/i}"
-                                pov "{i}What did I even eat...{/i}"
+                                pov "(Shit!)"
+                                pov "(I hadn't thought about him asking me. Fuck, fuck...)"
+                                pov "(Think of something...{w}non-phallic.)"
+                                pov "(What did I even eat...)"
                                 scene bg bedroomflashback1 with fade
-                                pov "{i}Shit! I cooked myself hot dogs!{/i}"
-                                pov "{i}With mayo!{/i}"
-                                pov "{i}Fuck!{/i}"
-                                pov "{i}God damn it!{/i}"
+                                pov "(Shit! I cooked myself hot dogs!)"
+                                pov "(With mayo!)"
+                                pov "(Fuck!)"
+                                pov "(God damn it!)"
                                 scene bg bedroomnight with fade
-                                pov "{i}Okay, what other foods do I have in my house...{/i}"
+                                pov "(Okay, what other foods do I have in my house...)"
                                 scene bg kitchen with fade
-                                pov "{i}Let's see.{/i}"
+                                pov "(Let's see.)"
                                 show banana at Position(xpos=0.5, xanchor=0.5, ypos=0.5, yanchor=0.5)with dissolve
-                                pov "{i}No, goddamnit!{/i}"
+                                pov "(No, goddamnit!)"
                                 hide banana
                                 show phallicicecream at Position(xpos=0.5, xanchor=0.5, ypos=0.5, yanchor=0.5)with dissolve
-                                pov "{i}Fuck, what the hell!{/i}"
+                                pov "(Fuck, what the hell!)"
                                 hide phallicicecream
                                 show cucumber at Position (xpos=0.5, xanchor=0.5, ypos=0.5, yanchor=0.5)with dissolve
-                                pov "{i}Jesus fucking Christ!{/i}"
-                                pov "{i}Is there any food in this fucking house that is {b}not{/b} shaped like a dick!?{/i}"
+                                pov "(Jesus fucking Christ!)"
+                                pov "(Is there any food in this fucking house that is {b}not{/b} shaped like a dick!?)"
                                 hide cucumber
-                                pov "{i}Okay, [povname], just make something up.{/i}"
+                                pov "(Okay, [povname], just make something up.)"
                                 show macncheese at Position (xpos=0.5, xanchor=0.5, ypos=0.5, yanchor=0.5)with dissolve
-                                pov "{i}Mac and Cheese.{/i}"
-                                pov "{i}Yes...{w} Mac and Cheese...{/i}"
-                                pov "{i}That will work!{/i}"
-                                pov "{i}'made myself some nice mac and cheese{/i}"
-                                pov "{i}If I add a happy face, it might look more legit.{/i}"
-                                pov "{i}'made myself some nice mac and cheese :)'{/i}"
-                                pov "{i}Buttz can't get any weird ideas if we're talking about just Mac and Cheese. No way.{/i}"
-                                pov "{i}It's such a safe and...{w}innocent food...{/i}"
+                                pov "(Mac and Cheese.)"
+                                pov "(Yes...{w} Mac and Cheese...)"
+                                pov "(That will work!)"
+                                hide macncheese
+                                pov "('made myself some nice mac and cheese)"
+                                pov "(If I add a happy face, it might look more legit.)"
+                                pov "('made myself some nice mac and cheese :)')"
+                                pov "(Buttz can't get any weird ideas if we're talking about just Mac and Cheese. No way.)"
+                                pov "(It's such a safe and...{w}innocent food...)"
                                 play sound "vibrate.mp3"
                                 buttz "'Oh. Was it just like the regular old box ones or did you actually cook it?'"
-                                pov "{i}'are you fucking judging me'{/i}"
+                                pov "('are you fucking judging me')"
                                 buttz "'No! No, I'm not!'"
-                                pov "{i}'good'{/i}"
-                                pov "{i}That was close...{/i}"
-                                pov "{i}I like Buttz but I cannot allow him to use text as a means of pleasure...{/i}"
-                                pov "{i}Only bad things could come from such a situation.{/i}"
+                                pov "('good')"
+                                pov "(That was close...)"
+                                pov "(I like Buttz but I cannot allow him to use text as a means of pleasure...)"
+                                pov "(Only bad things could come from such a situation.)"
                                 buttz "'How about homework? What'd you study?'"
-                                pov "{i}'i only have one course.'{/i}"
+                                pov "('i only have one course.')"
                                 buttz "'Oh. That's right.'"
-                                pov "{i}Hm... It's only fair to ask back, I guess...{/i}"
-                                pov "{i}'what did you do today?'{/i}"
+                                pov "(Hm... It's only fair to ask back, I guess...)"
+                                pov "('what did you do today?')"
                                 buttz "'Well, considering the time, technically, all I've done today is talk to you.'"
-                                pov "{i}He's being a smart-ass.{/i}"
-                                pov "{i}'right. well, what did you do {b}yesterday{/b}'{/i}"
+                                pov "(He's being a smart-ass.)"
+                                pov "('right. well, what did you do {b}yesterday{/b}')"
                                 buttz "'After class, I went home and cleaned my face a little, hadn't done that in a while. Then did some homework and got really bored. I don't have too many people to talk to once I'm out of class and not talking to my patients.'"
-                                pov "{i}Patients?{/i}"
-                                pov "{i}Right, he was a dentist not too long ago.{/i}"
-                                pov "{i}'do you miss working as a dentist'{/i}"
+                                pov "(Patients?)"
+                                pov "(Right, he was a dentist not too long ago.)"
+                                pov "('do you miss working as a dentist')"
                                 buttz "'Not really, I kind of only did it because my parents told me to - I mean, I'm good at it, don't get me wrong but it's not particularly exciting even though I made good money. My patients were typically the nice part of my day and occasionally I'd talk to my med school friends and go to meet-ups and such. We'd been actually pretty out of touch until now, though.'"
-                                pov "{i}Buttz must've had really forceful parents, I suppose.{/i}"
-                                pov "{i}Well, at least he got to meet interesting people all the time.{/i}"
-                                pov "{i}'well, i hope you get your license and all that.'{/i}"
+                                pov "(Buttz must've had really forceful parents, I suppose.)"
+                                pov "(Well, at least he got to meet interesting people all the time.)"
+                                pov "('well, i hope you get your license and all that.')"
                                 buttz "'Yeah, me too.'"
                                 $ somethingwrong = 1
                                 if pyrogaveyou == 0:
                                     jump phoneconvo1
                         buttz "'Hey. So is the party a definite go or no-go?'"
                         if partybutt == True:
-                            pov "{i}I don't see why anything would change.{/i}"
+                            pov "(I don't see why anything would change.)"
                         if partybutt == False:                                                       
-                            pov "{i}This could be a chance to {b}really{/b} get to know who I'm dating...{/i}"
-                            pov "{i}'i think i'll come.'{/i}"
-                            pov "{i}I guess this could also be an opportunity to meet everyone else, too.{/i}"
+                            pov "(This could be a chance to {b}really{/b} get to know who I'm dating...)"
+                            pov "('i think i'll come.')"
+                            pov "(I guess this could also be an opportunity to meet everyone else, too.)"
                         buttz "'Awesome! Well, this weekend, yeah?'"
+                        pov "('yes')"
+                        buttz "'OK'"
+                        pov "(Christ, I really should get more sleep)"
+                        pov "(No more texting for now.)"
+                        scene black with fade
+                        show stl at Position(xpos = 0.5, xanchor=0.5, ypos=0.5, yanchor=0.5) with fade
+                        $ renpy.pause (3.0)
+                        hide stl with dissolve
+                        pov "(It's...still a bit dark.)"
+                        pov "(What time is it?)"
+                        show clock at Position(xpost=0.5, xanchor=0.5, ypos=0.5, yanchor=0.5) with dissolve
+                        pov "(7 AM... This is {w} bearable.)"
+                        hide clock
+                        pov "(I should take a shower...)"
+                        scene bg shower with fade
+                        pov "(I'm a little bit sleepy...)"
+                        pov "(This water will wake me up...)"
+                        pov "(It should, {w}at least...)"
+                        scene black with fade
+                        pov "(There's that girl again...)"
+                        pov "(She looks a little different now...)"
+                        pov "(Older, really...)"
+                        pov "(She's not a girl, no...)"
+                        pov "(She's a woman now. But the smell...)"
+                        pov "(This smell is different...)"
+                        pov "(The smell of rotting flesh, that's what it is.)"
+                        pov "(And... what's this?)"
+                        pov "(Some kind of... growing sensation?)"
+                        pov "(Suddenly, it seems I can see...{w} rain.)"
+                        pov "(Not the shower's water, it's...)"
+                        pov "(It's a storm! Not in the winter, this time. Warm and dirty.)"
+                        pov "(The girl...{w} She's vanished to the grass.)"
+                        pov "(And I can't breathe...)"
+                        pov "(I can't breathe...)"
+                        pov "(I can't...)"
+                        pov "(...Breathe...)"
+                        pov "(...)"
+                        pov "(...)"
+                        pov "(...)"
+                        $ flash = Fade(.25, 0, .75, color="#fff")
+                        scene bg underwater with flash
+                        pov "(Underwater, I haven't been in a pool in a long time...)"
+                        pov "(In a very long time.)"
+                        scene bg outsidepool with flash
+                        pov "(It's good to have a morning pool day.)"
+                        pov "(After all, I haven't been in one of these in so long...)"
+                        u "Hey, sexy."
+                        pov "(Wh-wh...!)"
                         show wip at Position(xpos = 0.5, xanchor=0.5, ypos=0.5, yanchor=0.5) with fade
                         pov "Save your game here, we haven't built the rest of the game."
                     "Nah":    
@@ -1353,11 +1405,11 @@ label start:
                         pov "We can still hang out, you know?"
                         buttz "Yeah... Yeah, I know."
                         hide buttsad with dissolve
-                        pov "{i}Wow... I really must’ve...{/i}"
-                        pov "{i}I hope this doesn’t ruin our friendship...{/i}"
+                        pov "(Wow... I really must’ve...)"
+                        pov "(I hope this doesn’t ruin our friendship...)"
                         stop music fadeout 2.0
                         $ renpy.pause (3.0)
-                        pov "{i}Shit.{/i}"
+                        pov "(Shit.)"
                         show eop at Position(xpos = 0.5, xanchor=0.5, ypos=0.5, yanchor=0.5) with fade
                         $ renpy.pause (3.0)
                         hide eop with dissolve
