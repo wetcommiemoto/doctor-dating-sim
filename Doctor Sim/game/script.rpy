@@ -21,6 +21,9 @@ image bg bedroomflashback1 = "bedroomflashback1.png"
 image bg kitchen = "kitchen.png"
 image bg underwater = "underwater.png"
 image bg outsidepool = "outsidepool.png"
+image bg largematch = "largematch.png"
+image bg bonfire = "bonfire.png"
+image bg purplebonfire = "purplebonfire.png"
 image envelope = "envelope.png"
 image letter = "letter.png"
 image twl = Text("Two Weeks Later...", size=40)
@@ -31,6 +34,9 @@ image ohl = Text("One Hour Later...", size=40)
 image eop = Text("End of Prologue", size=40)
 image stl = Text("Some Time Later...", size=40)
 image coc = Text("CHAPTER ONE: THE COLOR OF COMPROMISE", size=40)
+image afm = Text("A Few Minutes Later...", size=40)
+image acha = Text("A Couple Hours After...", size=40)
+image fmhl = Text("Few More Hours Later...", size=40)
 image wip = Text("Save game here for update", size=40)
 image pyro1 = "pyro1.png"
 image pyro2 = im.Flip("pyro1.png", horizontal=True)
@@ -1393,6 +1399,135 @@ label start:
                         pov "(After all, I haven't been in one of these in so long...)"
                         u "Hey, sexy."
                         pov "(Wh-wh...!)"
+                        show p with dissolve
+                        p "I noticed you were swimming so I just {w}had{/w} to see this."
+                        p "I see you're already drying, though!"
+                        pov "You're gonna get in the pool?"
+                        p "Swimming? God, no! Only fucking anime weebs get in pools. Besides, why the hell would anyone dip themselves in water if they have fire instead?"
+                        pov "I... Okay, sure."
+                        p "I gotta say, I'm a little disappointed, again."
+                        pov "Disappointed?"
+                        p "You didn't accept my invitation?"
+                        pov "Invitation? You mean telling Buttz that I was dating you?"
+                        p "Yeah, pretty much. It's okay though, I respect you."
+                        pov "Okay then."
+                        p "So."
+                        p "Are you gonna ask me?"
+                        pov "Ask you?"
+                        pov "Ask you what?"
+                        p "How I got your info, [povname]."
+                        pov "Oh."
+                        pov "Yeah, how {i}did{/i} you get my information?"
+                        p "Well, here's the deal. In a later part of your fate, you will end up dating me and trust me , it's gonna be the coolest shit ever. But I'll only let you know that information when it happens."
+                        pov "So why did you want me to ask you?"
+                        p "I was hoping I'd get a stronger reaction. Didn't work."
+                        pov "Okay, then."
+                        p "All silly dating things aside, I'm gonna do another bonfire near the school. You wanna come?"
+                        menu:
+                            "Sure, I guess.":
+                                pov "Sure, I guess."
+                                p "Good."
+                                p "Come with me!"
+                                hide p
+                                scene black with fade
+                                show afm at Position(xpos=0.5, xanchor=0.5, ypos=0.5, yanchor=0.5)with fade
+                                $ renpy.pause (3.0)
+                                hide afm with dissolve
+                                pov "Where are we going?"
+                                p "We're not too far."
+                                show acha at Position(xpos=0.5, xanchor=0.5, ypos=0.5, yanchor=0.5) with fade
+                                $ renpy.pause (3.0)
+                                hide acha with dissolve
+                                pov "I thought you said it was near the school."
+                                pov "I haven't even talked to Buttz today."
+                                p "This is gonna be a good spot. Stop complaining, weeb."
+                                show fmhl at Position(xpos=0.5, xanchor=0.5, ypos=0.5, yanchor=0.5) with fade
+                                $ renpy.pause (3.0)
+                                hide fmhl with dissolve
+                                pov "Where are we? {w}I can't see anything."
+                                p "This is the spot."
+                                play sound "match.mp3"
+                                scene bg largematch with fade
+                                show p with dissolve
+                                p "Take a good step back."
+                                scene bg bonfire with fade
+                                pov "This is definitely not near school."
+                                p "No, it's pretty close. Fifteen miles."
+                                pov "That's not close."
+                                p "Closer than other places!"
+                                play sound "vibrate.mp3"
+                                buttz "'Hey, everything okay?'"
+                                pov "(Shit...)"
+                                pov "(Fuck...)"
+                                p "Keep your thoughts out loud, motherfucker."
+                                pov "Jesus Christ, I'm steaming."
+                                p "Good! Steaming is attractive."
+                                pov "No! I meant, this is really hot!"
+                                p "I know, it turns me on too!"
+                                pov "(Goddamnit.)"
+                                p "I know!"
+                                pov "Nevermind."
+                                p "Well. What do you think of the fire?"
+                                pov "It's dangerous."
+                                p "Past that."
+                                pov "It's...{w} Hm...{w} I guess it's kind of...{w} interesting. It's a big light."
+                                p "Yes, it's a big light. But it's a {i}natural{/i} light."
+                                p "That's what makes it amazing."
+                                pov "I...I guess?"
+                                p "Look at it, [povname]. It's fucking awesome."
+                                pov "(I guess her name makes a lot more sense now.)"
+                                pov "(She's a pyromaniac.)"
+                                p "Here, I'm gonna show you a magic trick. Ready?"
+                                pov "(She hasn't called me out on thinking...)"
+                                p "Ready!?"
+                                pov "Y-Yes."
+                                p "WOO!"
+                                play sound "splash.mp3"
+                                scene bg purplebonfire with fade
+                                p "It's purple, [povname]! It's VIOLENT PURPLE."
+                                pov "(I'm not gonna lie. That was pretty cool.)"
+                                p "Oh man, oh man!"
+                                p "This is so great. You know what?"
+                                p "Dance with me, [povname]! Dance with me! We'll have a fire dance!"
+                                pov "I don't think I should be here anyway."
+                                p "Oh, screw that {i}ass{/i}, dance with me, goddamnit."
+                                menu:
+                                    "Dance with Dr. Pyro.":
+                                        pov "Fine, okay!"
+                                        pov "Jesus!"
+                                        hide p
+                                        scene black with fade
+                                        pov "(This is kind of nice, I guess.)"
+                                        pov "(But I really didn't just say yes to Buttz {i}not{/i} hang out with him...)"
+                                        pov "(It's really hot...)"
+                                        pov "(I mean. It's like. Warm. As in temperature.)"
+                                        pov "(Not...)"
+                                        pov "(Nevermind.)"
+                                        scene bg purplebonfire with fade
+                                        show p with dissolve
+                                        p "Wow, [povname]. You can dance quite well!"
+                                        pov "Well, we were just kind of circling around the fire."
+                                        p "Don't ruin the fantasy."
+                                        p "We should hang out more often, [povname]."
+                                        pov "I... I mean, this was a little fun."
+                                        p "You should break up with Buttz. Stay with me."
+                                        pov "(I've only just started. It wouldn't be fair...)"
+                                        pov "(It's a little tempting...)"
+                                        pov "I'm sorry. I've just started dating Buttz. I barely even know him. I really want to try things out with him."
+                                        p "..."
+                                        pov "We can still be friends, though. {w}Right?"
+                                        p "Yeah. Friends."
+                                        pov "The party's tomorrow night. I'm inviting you, I guess. There's no rules against it."
+                                        p "Hm."
+                                        p "Okay, I'll come then."
+                                        pov "Are...are you okay?"
+                                        p "I'm fine."
+                                        pov "Okay..."
+                                        pov "Okay."
+                                        scene black with fade
+                                        $ bonfireEvent = 1
+                                    "Reject Tribal Gesture.":
+                            "I'm not interested.":
                         show wip at Position(xpos = 0.5, xanchor=0.5, ypos=0.5, yanchor=0.5) with fade
                         pov "Save your game here, we haven't built the rest of the game."
                     "Nah":    
