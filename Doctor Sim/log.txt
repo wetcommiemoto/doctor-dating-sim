@@ -1,7 +1,7 @@
-Fri Dec 26 01:47:41 2014
+Sun Jan 11 16:43:14 2015
 Windows-post2008Server-6.2.9200
 Ren'Py 6.18.2.729
-Doctor-Sim 0.01:3
+ 
 
 
 Windowed mode.
@@ -296,11 +296,3 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Performance test:
-- Target is 5 frames in 0.333333333333 seconds.
-- Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.016000 seconds.
-- Frame drawn at 0.031000 seconds.
-- Frame drawn at 0.048000 seconds.
-- Frame drawn at 0.065000 seconds.
-- 0.065000 seconds to render 5 frames.

@@ -2,12 +2,12 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1245: end of line expected.
-    jump label phoneconvo1
-               ^
+File "game/script.rpy", line 1529: choice menuitem expects a non-empty block.
+    "Reject Tribal Gesture.":
+                             ^
 
-File "game/script.rpy", line 1335: end of line expected.
-    jump label phoneconvo1
-               ^
+File "game/script.rpy", line 1530: choice menuitem expects a non-empty block.
+    "I'm not interested.":
+                          ^
 
 Ren'Py Version: Ren'Py 6.18.2.729
